@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 🔴 Live</title>
+    <link rel="stylesheet" href="public/style.css">
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+
+        <div class="columns is-vcentered">
+          <div class="column is-narrow">
+            <h1 class="title tag is-large is-danger"> LIVE </h1>
+          </div>
+          <div class="column is-narrow">
+            <h2 class="subtitle is-5">{{ len . }} Channels</h2>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="columns is-multiline">
+
+            {{ range . }}
+            <div class="column is-one-quarter">
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-16by9">
+                    <a href="https://www.youtube.com/watch?v={{ .Live }}" target="_blank" rel="noopener">
+                      <img src="https://img.youtube.com/vi/{{ .Live }}/mqdefault.jpg" alt="{{ .Name }}">
+                    </a>
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <p class="title is-6" dir="auto">
+                    <a href="https://www.youtube.com/watch?v={{ .Live }}" target="_blank" rel="noopener">
+                      {{ .Name }}
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            {{ end }}
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </body>
+</html>
