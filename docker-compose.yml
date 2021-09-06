@@ -1,0 +1,9 @@
+version: '2'
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - '127.0.0.1:4001:3000'
+    env_file:
+      - .env

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# Usage: deploy <branch> <user@server-ip> services
+# example: deploy master root@123.123.123.123 web
+
+set -e
+
+BRANCH=$1
+SERVER=$2
+SERVICES=${@:3}
+
+APP=/root/projects/live
+REPO=git@github.com:emad-elsaid/live.git
+ENVFILE=/root/env/live/.env
+
+sshin() {
+    ssh -o LogLevel=QUIET -t $SERVER "cd $APP; $@"
+}
+
+echo "[*] Deleting old files"
+ssh -o LogLevel=QUIET -t $SERVER rm -rf $APP
+
+echo "[*] Clone branch"
+ssh -o LogLevel=QUIET -t $SERVER git clone --depth=1 --branch $BRANCH $REPO $APP
+
+echo "[*] Copy .env file"
+ssh -o LogLevel=QUIET -t $SERVER cp $ENVFILE $APP/.env
+
+echo "[*] Pulling new docker images"
+sshin docker-compose pull
+
+echo "[*] Building images"
+sshin docker-compose build $SERVICES
+
+echo "[*] Stop old containers"
+sshin docker-compose stop $SERVICES
+
+echo "[*] Bring up new containers"
+sshin docker-compose up -d $SERVICES
+
+echo "[*] Clean docker"
+sshin docker system prune
