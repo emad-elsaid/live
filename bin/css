@@ -8,13 +8,6 @@ cat << EOT > bulma.scss
 @charset "utf-8";
 \$card-shadow: 0;
 @import "bulma/bulma.sass";
-.one-line{
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-}
 EOT
 
 sass --sourcemap=none \
