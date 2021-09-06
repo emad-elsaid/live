@@ -36,3 +36,9 @@ This program will list all live videos for a list of youtube channels in one pag
 - Keep it simple. try as hard as possible not to add any dependencies
 - Add more channels
 - Add useful features list searching in the list by name
+
+# Notable files
+
+- main.go : includes the program main entry point
+- css : a bash script that downloads bulma library and change some variables and compile it with SASS
+- channels.go : include the list of channels IDs
