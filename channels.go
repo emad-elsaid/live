@@ -6,7 +6,8 @@ var channelsIDs = []string{
 	"UC65i3Fyq91uiUkIS0i5GLNQ", // alaraby
 	"UCCv1Pd24oPErw5S7zJWltnQ", // aljazeera mubasher
 	"UCH4UNKBHSNwstan99YDoCVg", // elghad
-	"UCIJXOvggjKtCagMfxvcCzAA", // sky news
+	"UCIJXOvggjKtCagMfxvcCzAA", // sky news arabia
+	"UCNye-wNBqNL5ZzHSJj3l8Bg", // aljazeera english
 	"UCRJUVYt9gjg8MnlGacySUdg", // elsharq news
 	"UCSrZ3UV4jOidv8ppoVuvW9Q", // euro news usa
 	"UCUHq39HXLyAjjMPIjsNRLpw", // cbc live
@@ -16,5 +17,9 @@ var channelsIDs = []string{
 	"UCelk6aHijZq-GJBBB9YpReA", // bbc arabic
 	"UCfiwzLy-8yKzIbsmZTzxDgw", // aljazeera
 	"UCknLrEdhRCp1aegoMqRaCZg", // DW news
+	"UCoMdktPbSTixAyNGwb-UYkQ", // sky news
+	"UCrj5BGAhtWxDfqbza9T9hqA", // elhadath
+	"UCsHdPPJXT-yKVTLGkn3DSvQ", // CNBC arabia
 	"UCsP3Clx2qtH2mNZ6KolVoZQ", // RT arabic
+	"UCzWdc0aUo0IDk5ysLrt04hw", // elquahera welnas
 }
