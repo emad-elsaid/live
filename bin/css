@@ -8,6 +8,9 @@ cat << EOT > bulma.scss
 @charset "utf-8";
 \$card-shadow: 0;
 @import "bulma/bulma.sass";
+body {
+     background: #F7F7F7;
+}
 EOT
 
 sass --sourcemap=none \
