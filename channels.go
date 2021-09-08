@@ -22,4 +22,5 @@ var channelsIDs = []string{
 	"UCsHdPPJXT-yKVTLGkn3DSvQ", // CNBC arabia
 	"UCsP3Clx2qtH2mNZ6KolVoZQ", // RT arabic
 	"UCzWdc0aUo0IDk5ysLrt04hw", // elquahera welnas
+	"UCJUCcJUeh0Cz2xyKwkw5Q1w", // Bein sports
 }
